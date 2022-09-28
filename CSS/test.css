@@ -1,0 +1,160 @@
+.hidenmark{
+    list-style: none;
+
+    padding: 0px;
+    margin: 0px;
+}
+
+.button {
+    padding: 0px;
+    border: none;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    outline: 1px solid blue;
+}
+
+
+/* .button-icon {
+    fill: rgb(223, 12, 12);
+    width: 44px;
+    height: 44px;
+} */
+/* section {
+    display: block;
+    width: 206px;
+    height: 44px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 16px;
+} */
+
+
+.flex {
+    display: flex;
+}
+/* new2 */
+.contact-icon {
+    fill: black;
+    margin-right: 10px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.header .contact-link {
+    display: flex;
+    margin-left: auto;
+    align-items: baseline;
+}
+.contact-link .link {
+    color: black;
+}
+.contact-item + .contact-item {
+    margin-left: 50px;
+    /* можна замінити на li */
+}
+/* .contact-item {
+    display: flex;
+} */
+/* ефект наведення */
+.hover-link:hover,  .hover-link:focus {
+    color: blue;
+    fill: greenyellow;
+}
+/* .hover .link:hover,  .hover .link:focus {
+    color: green;
+    fill: pink;
+} */
+.contact-icon:hover, .contact-icon:focus {
+    fill: goldenrod; 
+}
+
+.hover .link.current {
+    color: var(--accent-color);
+}
+
+
+
+/* new3 */
+
+/* team */
+.ourteam {
+    background-color: var(--bcg-sec-color);
+}
+.ourteam-coloms {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50pt;
+}
+.team-item {
+    position: relative;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+/* .team-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+} */
+.ourteam-css {
+    background-color: var(--main-wight-color);
+
+    padding-bottom: 30px;
+    padding-top: 30px;
+    
+}
+.position {
+    position: relative;
+}
+.team-title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+
+    margin-bottom: 10px;
+}
+.teem-text{
+    font-size: 16px;
+    line-height: 1.19;
+}
+.soc-networks {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    width: 206px;
+    height: 44px;
+    outline: 4px dashed orangered;
+}
+.soc-networks-coloms {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+.soc-networks-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    fill: var(--main-icon-color);
+    width: 44px;
+    height: 44px;
+}
+.soc-networks-item:hover, .soc-networks-item:focus {
+    fill: var(--main-wight-color);
+    background-color: var(--accent-color);
+    border-radius: 50%;
+}
+.soc-networks-icon {
+    width: 20px;
+    height: 20px;
+}
