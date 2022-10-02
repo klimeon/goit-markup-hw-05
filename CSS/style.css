@@ -91,11 +91,13 @@ body {
     min-height: 38px;
     min-width: 73px;
     padding: 6px 22px;
+    transition: background-color 250ms var(--animation-funktion);
 }
     
 .button.pri:hover, .button.pri:focus {
     color: var(--main-wight-color);
     background-color: var(--accent-color);
+    transition: background-color 250ms var(--animation-funktion);
 }
 .button.sec {
     color: var(--main-wight-color);
@@ -104,6 +106,7 @@ body {
     min-width: 216px;
     min-height: 50px;
     padding: 10px 32px;
+    transition: background-color 250ms var(--animation-funktion);
     
 }
 
@@ -138,6 +141,7 @@ header .link {
     align-items: center;
     padding-top: 32px;
     padding-bottom: 32px;
+    transition: background-color 250ms var(--animation-funktion), fill 250ms var(--animation-funktion), color 250ms var(--animation-funktion);
 }
 .nav {
     display: flex;
@@ -169,6 +173,7 @@ header .link {
     fill: var(--text-color);
     /* display: flex; */
     gap: 10px;
+    transition: background-color 250ms var(--animation-funktion), fill 250ms var(--animation-funktion), color 250ms var(--animation-funktion);
 }
 .hover .current {
     color: var(--accent-color);
@@ -176,11 +181,12 @@ header .link {
 .current::after {
     display: block;
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
+    border-radius: 2px;
 
     content: '';
     width: 100%;
-    height: 5px;
+    height: 4px;
     background-color: var(--accent-color);
 }
 /* .contact-icon {
@@ -189,6 +195,7 @@ header .link {
 .hover .link:hover,  .hover .link:focus {
     color: var(--accent-color);
     fill: var(--accent-color);
+    transition: background-color 250ms var(--animation-funktion), fill 250ms var(--animation-funktion), color 250ms var(--animation-funktion);
 }
 
 /* .hover .link.current::after {
@@ -257,13 +264,17 @@ header .link {
     
 } */
 .backdrop.is-hidden {
-    visibility: hidden;
-    opacity: 0;
+    /* visibility: hidden; */
     pointer-events: none;
+    opacity: 0;
     transform: scale(1.5);
+    /* transition-property: transform, opacity;
+    transition-duration: 500ms, 2500ms;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1), cubic-bezier(0.075, 0.82, 0.165, 1);;
+    transition-delay: 0ms; */
 }
 .backdrop {
-    opacity: 1;
+    
     z-index: 9;
     position: fixed;
     top: 0;
@@ -271,10 +282,11 @@ header .link {
     width: 100%;
     height: 100%;
     background-color: rgba(105, 105, 105, 0.5);
+    opacity: 1;
     transform: scale(1);
-    transition-property: transform;
-    transition-duration: 500ms;
-    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-property: transform, opacity;
+    transition-duration: 500ms, 200ms;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1), cubic-bezier(0.075, 0.82, 0.165, 1);;
     transition-delay: 0ms;
 }
 .modal {
@@ -291,8 +303,8 @@ header .link {
 }
 .close-button {
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 8px;
+    top: 8px;
     width: 30px;
     height: 30px;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -392,19 +404,22 @@ header .link {
     height: 70px;
 
     background-color: rgba(47, 48, 58, 0.8);
-    transform: translatey(100%);
-    transition-property: transform;
+    /* transform: translatey(100%); */
+    /* transition-property: transform;
     transition-duration: 250ms;
     transition-timing-function: var(--animation-funktion);
-    transition-delay: 0ms;
+    transition-delay: 0ms; */
 }
 .activity-text {
     color: #ffffff;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
     text-transform: uppercase;
 }
-.activity-item:hover .home-overlay, .activity-item:focus .home-overlay {
+/* .activity-item:hover .home-overlay, .activity-item:focus .home-overlay {
     transform: translateY(0);
-}
+} */
 /* .activity-image:hover .home-overlay, .home-overlay:focus {
     opacity: 1;
     
@@ -464,12 +479,15 @@ header .link {
     fill: var(--main-icon-color);
     width: 44px;
     height: 44px;
+    border-radius: 50%;
+    transition: background-color 250ms var(--animation-funktion), fill 250ms var(--animation-funktion), color 250ms var(--animation-funktion);
 }
 
 .soc-networks-link:hover, .soc-networks-link:focus {
     fill: var(--main-wight-color);
     background-color: var(--accent-color);
     border-radius: 50%;
+    transition: background-color 250ms var(--animation-funktion), fill 250ms var(--animation-funktion), color 250ms var(--animation-funktion);
 }
 .soc-networks-icon {
     width: 20px;
@@ -507,10 +525,12 @@ header .link {
     height: 92px;
     border: 1px solid var(--main-icon-color);
     border-radius: 4px;
+    transition: background-color 250ms var(--animation-funktion), fill 250ms var(--animation-funktion), color 250ms var(--animation-funktion), border 250ms var(--animation-funktion);
 }
 .clients-link:hover, .clients-link:focus {
     fill: var(--accent-color);
     border: 1px solid var(--accent-color);
+    transition: background-color 250ms var(--animation-funktion), fill 250ms var(--animation-funktion), color 250ms var(--animation-funktion), border 250ms var(--animation-funktion);
 }
 
 
@@ -576,11 +596,13 @@ strong {
     border-radius: 50%;
     width: 44px;
     height: 44px;
+    transition: background-color 250ms var(--animation-funktion), fill 250ms var(--animation-funktion), color 250ms var(--animation-funktion);
 }
 .soc-network-link:hover, .soc-network-link:focus {
     fill: var(--main-wight-color);
     background-color: var(--accent-color);
     border-radius: 50%;
+    transition: background-color 250ms var(--animation-funktion), fill 250ms var(--animation-funktion), color 250ms var(--animation-funktion);
 }
 
 
@@ -687,6 +709,7 @@ strong {
 }
 .portfolio .button:hover, .portfolio .button:focus {
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 3px 1px rgba(0, 0, 0, 0.1) ;
+    transition: box-shedow 250ms var(--animation-funktion);
 }
 /* .works-box:hover, .works-box:focus {
     box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
