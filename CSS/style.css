@@ -76,8 +76,7 @@ body {
 
 /* кнопки */
 .button {
-    color: var(--title-color);
-    background-color: var(--bcg-sec-color);
+    
     font-family: 'Roboto', sans-serif ;
     font-weight: 700;
     font-size: 16px;
@@ -91,13 +90,7 @@ body {
     min-height: 38px;
     min-width: 73px;
     padding: 6px 22px;
-    transition: background-color 250ms var(--animation-funktion),  color 250ms var(--animation-funktion);
-}
     
-.button.pri:hover, .button.pri:focus {
-    color: var(--main-wight-color);
-    background-color: var(--accent-color);
-    transition: background-color 250ms var(--animation-funktion),  color 250ms var(--animation-funktion);
 }
 .button.sec {
     color: var(--main-wight-color);
@@ -106,10 +99,8 @@ body {
     min-width: 216px;
     min-height: 50px;
     padding: 10px 32px;
-    transition: background-color 250ms var(--animation-funktion),  color 250ms var(--animation-funktion);
     
 }
-
 
 /* header */
 .header {
@@ -563,6 +554,7 @@ address .link {
 } 
 .link.contacts {
     color: var(--spec-link-color);
+    transition: background-color 250ms var(--animation-funktion), fill 250ms var(--animation-funktion), color 250ms var(--animation-funktion);
 }
 strong {
     text-transform: uppercase;
@@ -612,11 +604,25 @@ strong {
     justify-content: center;
     column-gap: 8px;
     margin-bottom: 50px;
+    
 }
+.button.pri:hover, .button.pri:focus {
+    color: var(--main-wight-color);
+    background-color: var(--accent-color);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 3px 1px rgba(0, 0, 0, 0.1);
+    transition: background-color 250ms var(--animation-funktion),  color 250ms var(--animation-funktion), box-shadow 250ms var(--animation-funktion);
+}
+
 .main-portfolio .button {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.62;
+
+    background-color: var(--bcg-sec-color);
+    color: inherit;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 3px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: none;
+    transition: background-color 250ms var(--animation-funktion),  color 250ms var(--animation-funktion), box-shadow 250ms var(--animation-funktion);
 }
 
 .our-works {
@@ -634,6 +640,8 @@ strong {
     padding-right: 24px;
     padding-bottom: 20px;
     padding-top: 20px;
+    /* box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
+    transition: box-shadow 2500ms var(--animation-funktion); */
 }
 /* Сітка */
 .works-item {
@@ -643,6 +651,11 @@ strong {
     display: block;
     text-decoration: none;
     color: inherit;
+
+    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
+    box-shadow: none;
+    transition: box-shadow 500ms var(--animation-funktion);
+
 }
 .works-item:not(:nth-child(3n)) {
     margin-right: 30px;
@@ -708,10 +721,6 @@ strong {
 .portfolio {
     font-size: 16px;
     line-height: 1.87;
-}
-.portfolio .button:hover, .portfolio .button:focus {
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 3px 1px rgba(0, 0, 0, 0.1) ;
-
 }
 /* .works-box:hover, .works-box:focus {
     box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
